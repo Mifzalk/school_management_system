@@ -11,12 +11,21 @@ import FacultyDetails from "./FacultyDetails";
 import FacultySchedule from "./FacultySchedule";
 import FacultySalary from "./FacultySalary";
 import FacultyManage from "./FacultyManage";
+import AdminLogin from "./AdminLogin";
+import AdminDashboard from "./admin/AdminDashboard";
+import ProtectedRoute from "./ProtectedRoute";
 
 /*function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/admin" element={<AdminLogin />} />
+      <Route path="/admin/dashboard/*" element={
+        <ProtectedRoute>
+      <AdminDashboard />
+    </ProtectedRoute>
+  }/>
+    </Routes>
   );
 }
 
